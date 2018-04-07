@@ -55,7 +55,7 @@
             <p>
                 Bestill befaring i skjema under.
             </p>
-            <form>
+            <form action="https://formspree.io/post@skadedyr.team" method="POST">
                 <div class="form-row">
                     <div class="col-12 col-lg-8">
                         <div class="input-group mb-2">
@@ -64,7 +64,7 @@
                                     <i class="fas fa-user"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="inspectionFormControlInputName" placeholder="Navn">
+                            <input type="text" class="form-control" name="navn" placeholder="Navn">
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                                     <i class="fas fa-home"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="inspectionFormControlInputAddress" placeholder="Adresse">
+                            <input type="text" class="form-control" name="adresse" placeholder="Adresse">
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="inspectionFormControlInputPhone" placeholder="Telefon">
+                            <input type="text" class="form-control" name="telefon" placeholder="Telefon">
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                                     <i class="fas fa-at"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="inspectionFormControlInputEmail" placeholder="Epost">
+                            <input type="text" class="form-control" name="email" placeholder="Epost">
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                                     <i class="far fa-calendar-alt"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" data-toggle="datepicker" id="inspectionFormControlInputDate" placeholder="Dato">
+                            <input type="text" class="form-control" data-toggle="datepicker" name="dato" placeholder="Dato">
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4">
@@ -122,7 +122,7 @@
                                     <i class="far fa-clock"></i>
                                 </div>
                             </div>
-                            <select id="inspectionFormControlInputTime" class="form-control">
+                            <select name="tid" class="form-control">
                                 <option selected disabled>Tid</option>
                                 <option>08-12</option>
                                 <option>12-16</option>
@@ -133,23 +133,27 @@
                 </div>
                 <div class="form-row">
                     <div class="col-12 col-lg-8">
-                        <div class="form-group">
-                            <textarea class="form-control" id="inspectionFormControlInputMessage" rows="3" placeholder="💬 Melding"></textarea>
+                        <div class="form-group mb-2">
+                            <textarea class="form-control" name="melding" rows="3" placeholder="💬 Melding"></textarea>
+                            <small id="emailHelp" class="form-text text-muted">
+                                Skadedyrteam plikter å bruke det middel og den metode som gir minst skadevirkninger på miljø og helse.
+                            </small>
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-12">
-                        <button type="button" class="btn btn-success mb-3">
+                        <button type="submit" class="btn btn-success mb-3">
                             <i class="fas fa-seedling"></i>
                             Bestill befaring
                         </button>
                     </div>
                 </div>
+                <input type="hidden" name="_format" value="plain" />
+                <input type="hidden" name="_language" value="no" />
+                <input type="hidden" name="_subject" value="Bestill befaring" />
+                <input type="hidden" name="_next" value="/bestill-befaring/takk.html" />
             </form>
-            <p class="card-text small">
-                Skadedyrteam plikter å bruke det middel og den metode som gir minst skadevirkninger på miljø og helse.
-            </p>
             <div class="row py-3">
                 <div class="col col-auto">
                     <h2 class="font-family-roboto">Telefon</h2>
