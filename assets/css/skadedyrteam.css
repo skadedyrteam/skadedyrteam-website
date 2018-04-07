@@ -1,0 +1,28 @@
+.datepicker-container {
+    font-size: 1rem;
+}
+
+.datepicker-panel>ul>li:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.datepicker-panel>ul>li.highlighted:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.datepicker-panel>ul>li.disabled.highlighted,
+.datepicker-panel>ul>li.disabled:hover.highlighted {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.datepicker-panel>ul>li.picked,
+.datepicker-panel>ul>li.picked:hover {
+    color: #28a745;
+}
+
+.font-family-roboto {
+    font-family: 'Roboto', sans-serif;
+}
