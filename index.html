@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="no">
 
 <head>
 
@@ -9,52 +9,289 @@
     <meta name="description" content="Skadedyrteam Østlandet">
     <meta name="author" content="Jan Annar Skaug, Stian Petrud">
 
+    <!-- Pace JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" integrity="sha256-EPrkNjGEmCWyazb3A/Epj+W7Qm2pB9vnfXw+X6LImPM="
+        crossorigin="anonymous"></script>
+
+    <!-- Pace CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/green/pace-theme-minimal.min.css" integrity="sha256-6ggquj024XoMxYQwW5jlnS6jZR8FDQ1i53Twu/UCEzs="
+        crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE="
+        crossorigin="anonymous" />
+
+    <!-- Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
 
-    <link rel="icon" href="assets/brand/icon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="assets/brand/icon-16x16.png" sizes="16x16" type="image/png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/skadedyrteam.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/brand/icon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/brand/icon-16x16.png" sizes="16x16" type="image/png">
+
 
     <title>Skadedyrteam</title>
-
-    <style>
-        .spin {
-            animation: spin 3s linear infinite;
-        }
-
-        @-moz-keyframes spin {
-            100% {
-                -moz-transform: rotate(360deg);
-            }
-        }
-
-        @-webkit-keyframes spin {
-            100% {
-                -webkit-transform: rotate(360deg);
-            }
-        }
-
-        @keyframes spin {
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-    </style>
 </head>
 
-<body class="pt-4">
+<body class="pt-lg-2">
 
-    <img class="d-block mx-auto mt-5 spin" src="assets/brand/skadedyrteam.svg" height="192" width="192" alt="">
-    <h2 class="text-center mt-4 text-uppercase" style="font-family: 'Roboto', sans-serif;">Skadedyrteam Østlandet</h2>
+    <div class="container py-2" id="bestill-befaring">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <a class="navbar-brand" href="#">
+                <img src="/assets/brand/skadedyrteam.svg" width="80" height="80" class="d-inline-block" alt="">
+                <span class="font-family-roboto text-uppercase">
+                    Skadedyrteam
+                </span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link text-uppercase" href="#hjem">Hjem</a>
+                    </li>
+
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link text-uppercase" href="#tjenester">Tjenester</a>
+                    </li>
+
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link text-uppercase" href="#omoss">Om oss</a>
+                    </li>
+
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link text-uppercase" href="#kontakt">Kontakt</a>
+                    </li>
+
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn rounded-0 btn-success my-2 my-sm-0" type="button" data-toggle="tooltip" data-placement="left" title="Døgnbemannet vakttelefon">
+                        <i class="fas fa-phone"></i>
+                        941 93 400
+                    </button>
+                </form>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+    <div class="jumbotron jumbotron-fluid bg-transparent text-center pb-4">
+        <div class="container mx-auto">
+            <h1 class="display-4 mb-3">Problemer med skadedyr?</h1>
+            <p>Skadedyrteam tar alle mulige oppdrag innen skadedyrbekjempelse og opererer på hele Østlandet.</p>
+            <a href="http://skadedyr.team/bestill-befaring" class="btn btn-success btn-lg">
+                <i class="fas fa-seedling"></i>
+                Bestill befaring
+            </a>
+        </div>
+    </div>
+
+    <div class="container py-2" id="tjenester">
+
+        <hr class="mb-md-5 d-md-block d-none">
+
+        <div class="row pb-3" id="skadedyrkontroll-privat">
+            <div class="col-md-6 col-lg-4 order-md-2">
+                <img class="featurette-image img-fluid mx-auto mb-3 mb-lg-0" src="/assets/img/private-hytter-og-boliger.jpg" alt="Private hytter og boliger">
+            </div>
+            <div class="col-md-6 col-lg-8 order-md-1">
+                <h4>Private hytter og boliger</h4>
+                <p>Våre godkjente skadedyrbekjempere hjelper deg å bli kvitt skadedyr i hus, hytte og hage hele året rundt.
+                    Vi tilpasser oss hvert enkelt tilfelle og skreddersyr en løsning for akkurat deg. Skadedyrteam plikter
+                    å følge substitusjonsprinsippet, og bruker derfor det middel og den metode som gir minst skadevirkninger
+                    på miljø og helse.
+                </p>
+            </div>
+        </div>
+
+        <hr class="my-md-5 d-md-block d-none">
+
+        <div class="row py-3" id="skadedyrkontroll-borettslag">
+            <div class="col-md-6 col-lg-4">
+                <img class="img-fluid mx-auto mb-3 mb-lg-0" src="/assets/img/borettslag-og-sameier.jpg" alt="Borettslag og sameier">
+            </div>
+            <div class="col-md-6 col-lg-8">
+                <h4>Borettslag og sameier</h4>
+                <p>Skadedyrteam tilbyr serviceavtale med skadedyrbeskyttelse i borettslag og sameier, der vi tilpasser behandlingen
+                    etter sesong. Vi utfører kontroll etter avtale, for eksempel fire ganger i året der vi bistår med utskiftning
+                    og supplering av bekjempelsesmidler og grundig ettersyn etter skadedyr. </p>
+            </div>
+        </div>
+
+        <hr class="my-md-5 d-md-block d-none">
+
+        <div class="row py-3" id="skadedyrkontroll-bedrift">
+            <div class="col-md-6 col-lg-4 order-md-2">
+                <img class="img-fluid mx-auto mb-3 mb-lg-0" src="/assets/img/bedrifter-og-naeringsbygg.jpg" alt="Bedrifter og næringsbygg">
+            </div>
+            <div class="col-md-6 col-lg-8 order-md-1">
+                <h4>Bedrifter og næringsbygg</h4>
+                <p>Bedrifter og næringsbygg har et spesielt ansvar for å verne sine kunder og ansatte mot smittsomme sykdommer
+                    fra skadedyr. Skadedyrteam utfører internkontroll i din bedrift på en fagmessig korrekt og effektiv måte,
+                    og påser at det ikke oppstår helse- eller miljøskade underveis.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container py-2" id="omoss">
+
+        <hr class="my-4 mb-5 d-md-block d-none">
+
+        <div class="row py-4">
+
+            <div class="col-md-6 col-lg-5">
+                <img class="img-fluid mx-auto" src="/assets/img/skadedyrteam.jpg" alt="Skadedyrteam">
+            </div>
+
+
+            <div class="col-md-6 col-lg-7">
+                <h3>Om oss</h3>
+                <p>
+                    Våre medarbeidere er offentlig godkjente skadedyrteknikkere og har lang erfaring i yrket. Vi leverer tjenester til bl.a.
+                    private husstander, hytteeiere, borettslag, kommuner, bedrifter og næringsbygg. Kontakt oss for en uforpliktende
+                    samtale.
+                </p>
+            </div>
+
+        </div>
+
+        <hr class="my-md-5 d-md-block d-none">
+
+        <div class="row py-3" id="kontakt">
+            <div class="col-md-7">
+
+                <h2 class="mb-3">Kontakt</h2>
+
+                <p class="lead mb-1">
+                    <a class="text-dark" href="tel:+4794193400">
+                        <i class="fas fa-phone mr-1"></i> 941 93 400
+                    </a>
+                </p>
+                <p class="mb-3">Døgnbemannet vakttelefon</p>
+
+
+                <p class="lead mb-1">
+                    <a class="text-dark" href="mailto:post@skadedyr.team?subject=Bestill%20befaring">
+                        <i class="far fa-envelope mr-1"></i> post@skadedyr.team
+                    </a>
+                </p>
+                <p class="mb-4">Få svar innen 24 timer</p>
+
+                <address class="mb-3">
+                        <strong>Skadedyr Team Østlandet AS</strong>
+                        <br /> Ånnerudvegen 14, Brumunddal
+                        <br />
+                        <abbr title="Organisasjonsnummer">Org nr.:</abbr> 920951775
+                    </address>
+
+                <a href="http://skadedyr.team/bestill-befaring" class="btn rounded-0 btn-outline-success my-2 mb-4">
+                    <i class="fas fa-seedling"></i>
+                    Bestill befaring
+                </a>
+
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid mx-auto" src="/assets/img/skadedyrteam-kart.png" alt="Skadedyrteam kart">
+            </div>
+        </div>
+
+        <hr class="my-md-4">
+
+    </div>
+
+    <footer class="container pt-2 pb-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <img src="assets/brand/skadedyrteam.svg" width="30" height="30" class="d-inline-block" alt="">
+                <span class="font-family-roboto text-uppercase">
+                    Skadedyrteam
+                </span>
+                <small class="d-block mb-3 text-dark">&copy; 2018</small>
+
+            </div>
+            <div class="col-6 col-md">
+                <h5>Hjem</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="bestill-befaring/">Bestill befaring</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#kontakt">Døgnåpen vakttelefon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Tjenester</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#skadedyrkontroll-privat">Private boliger</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#skadedyrkontroll-borettslag">Borettslag og sameier</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#skadedyrkontroll-bedrift">Bedrifter og næringsbygg</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md">
+                <h5>Om</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#kontakt">Kontakt</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#omoss">Om oss</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Personvern</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
         crossorigin="anonymous"></script>
+
+    <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+
+    <!-- Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k="
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/skadedyrteam.js"></script>
 </body>
 
 </html>
