@@ -26,3 +26,13 @@
 .font-family-roboto {
     font-family: 'Roboto', sans-serif;
 }
+
+.algolia-places {
+    flex: 1 1 auto;
+    width: 1%;
+}
+
+.algolia-places input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

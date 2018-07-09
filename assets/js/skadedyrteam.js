@@ -4,6 +4,14 @@ $(function () {
 $(function () {
     $('[data-toggle="popover"]').popover()
 });
+$(function () {
+    var placesAutocomplete = places({
+        container: document.querySelector('.address-input'),
+        type: 'address',
+        language: 'NO',
+        countries: ['NO']
+    });
+});
 (function () {
     "use strict";
     var startDate = new Date();

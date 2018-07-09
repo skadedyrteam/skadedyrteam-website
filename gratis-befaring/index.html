@@ -130,9 +130,12 @@
                     <p>
                         Skadedyrteam svarer på spørsmål om skadedyr, inspiserer eiendommen din og lager et uforpliktende tilbud med pris og bekjempelsesplan.
                     </p>
-                    <div class="alert alert-warning mb-4">
+                    <div class="alert alert-success mb-4 alert-dismissible fade show" role="alert">
                         Bestill gratis befaring og få
                         <strong>20% rabatt</strong> på bekjempelse. Gjelder tom. 31.07.2018.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -157,7 +160,7 @@
                                     <i class="fas fa-home"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" name="adresse" placeholder="Adresse">
+                            <input type="text" class="form-control" name="adresse address-input" placeholder="Adresse">
                         </div>
                     </div>
                 </div>
@@ -231,7 +234,7 @@
                     </div>
                 </div>
                 <input type="hidden" name="_subject" value="Bestill befaring" />
-                <input type="hidden" name="_next" value="https://skadedyrteam.no/gratis-befaring/takk.html" />
+                <input type="hidden" name="_next" value="https://skadedyrteam.no/bestill-befaring/takk.html" />
                 <input type="hidden" name="_language" value="no" />
                 <input type="hidden" name="_format" value="plain" />
             </form>
@@ -361,6 +364,8 @@
     <!-- Datepicker JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k="
         crossorigin="anonymous"></script>
+    <!-- Algolia Places -->
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.7.3"></script>
     <!-- Custom JS -->
     <script src="https://skadedyrteam.no/assets/js/skadedyrteam.js"></script>
 
